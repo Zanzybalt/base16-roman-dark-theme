@@ -2,7 +2,7 @@
 // Language syntax highlighting
 
 .comment {
-  color: @gray;
+  color: @brown;
 }
 
 .entity {
@@ -41,7 +41,7 @@
 }
 
 .constant {
-  color: @orange;
+  color: @syntax-text-color;
 
   &.character.escape {
     color: @cyan;
@@ -51,8 +51,12 @@
     color: @orange;
   }
 
+  &.boolean {
+	  color: @orange;
+  }
+
   &.other.color {
-    color: @cyan;
+    color: @orange;
   }
 
   &.other.symbol {
@@ -61,7 +65,7 @@
 }
 
 .variable {
-  color: @red;
+  color: @syntax-text-color;
 
   &.interpolation {
     color: @brown;
@@ -115,6 +119,10 @@
       color: @purple;
       font-style: italic;
     }
+
+	&.constant {
+		color: @orange;
+	}
   }
 
   &.section {
@@ -132,11 +140,11 @@
 
 .support {
   &.class {
-    color: @yellow;
+    color: @syntax-text-color;
   }
 
   &.function  {
-    color: @cyan;
+    color: @syntax-text-color;
 
     &.any-method {
       color: @blue;
