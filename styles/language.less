@@ -2,17 +2,18 @@
 // Language syntax highlighting
 
 .comment {
-  color: @brown;
+  color: @gray;
 }
 
 .entity {
-
-  &.name.type {
-    color: @yellow;
+	&.name.type {
+		&.instance {
+			color: @yellow;
+	  }
   }
 
   &.other.inherited-class {
-    color: @green;
+		color: @syntax-text-color;
   }
 }
 
@@ -38,6 +39,10 @@
 
 .storage {
   color: @purple;
+
+  &.todo {
+	  color: @gray;
+  }
 }
 
 .constant {
@@ -52,7 +57,7 @@
   }
 
   &.boolean {
-	  color: @orange;
+		color: @orange;
   }
 
   &.other.color {
@@ -120,9 +125,9 @@
       font-style: italic;
     }
 
-	&.constant {
-		color: @orange;
-	}
+		&.constant {
+			color: @orange;
+		}
   }
 
   &.section {
